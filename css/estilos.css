@@ -1,1 +1,389 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
+:root {
+  --green-dark: #208281;
+  --green-medium: #9ccea1;
+  --green-light: #a7d36a;
+  --purple-dark: #170312;
+  --purple-medium: #33032d;
+  --purple-light: #531253;
+  --gray-light: #eaeaea;
+  --white: #f4fffd;
+  --test: 2px solid red;
+}
+
+body {
+  font-size: 20px;
+  font-family: "Open Sans", sans-serif;
+}
+
+p {
+  font-size: 22px;
+}
+
+/* header */
+.contenido-header {
+  width: 100%;
+  /* min-width: 320px; */
+  height: 100vh;
+  background-image: url(../img/bg-girl.jpeg);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.contenido-header .fondo {
+  width: 0%;
+  height: 100%;
+  max-width: 100%;
+  background-image: url(../img/bg-top.png);
+  background-position: center;
+  transition: 0.3s ease all;
+}
+
+.contenido-header .texto {
+  width: calc(100vw - 30px);
+  height: 100vh;
+
+  font-size: 90px;
+  font-weight: 700;
+  font-family: "Noto Serif", serif;
+  font-style: italic;
+  color: #1c6a69;
+  mix-blend-mode: multiply;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.contenido-header .texto span {
+  font-size: 45px;
+}
+
+/* Navbar */
+
+.menu {
+  background-color: var(--green-medium);
+  width: 100%;
+  position: sticky;
+  top: 0;
+  text-align: center;
+  z-index: 999;
+
+  text-align: center;
+  font-family: "Noto Serif", serif;
+  font-style: italic;
+
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+  margin-bottom: 60px;
+}
+
+.menu a {
+  display: inline-block;
+  padding: 10px 30px;
+  font-size: 26px;
+  color: var(--gray-light);
+  background-color: var(--green-medium);
+  margin: 0 10px;
+  transition: 0.5s ease all;
+
+  text-decoration: none;
+}
+
+.menu a:hover {
+  transform: translateY(18px);
+  background-color: var(--green-light);
+}
+
+/* Titulo & subitulo*/
+.titulo {
+  font-size: 30px;
+  color: var(--green-dark);
+  font-family: "Noto Serif", serif;
+  font-weight: 700;
+  text-transform: uppercase;
+
+  margin-bottom: 20px;
+
+  z-index: 2;
+}
+
+.titulo span {
+  background-color: var(--gray-light);
+  padding: 0 15px;
+
+  z-index: 99;
+  position: relative;
+}
+
+.titulo::after {
+  content: "";
+  display: inline-block;
+  height: 2px;
+  width: 100%;
+  background: var(--green-dark);
+
+  position: relative;
+  top: -45px;
+  z-index: 1;
+}
+
+.subtitulo {
+  width: 70%;
+  font-size: 44px;
+  text-transform: uppercase;
+  display: inline-block;
+  margin-bottom: 50px;
+}
+
+/* Sections */
+
+/* Nosotros */
+.nosotros {
+  margin-bottom: 60px;
+}
+
+.nosotros .enlace {
+  display: inline-block;
+  margin-top: 40px;
+  color: var(--green-light);
+  font-weight: 700;
+  border-bottom: 1px solid transparent;
+  transition: 0.3s ease all;
+}
+
+.nosotros .enlace:hover {
+  text-decoration: none;
+  letter-spacing: 3px;
+  border-bottom: 1px solid var(--green-light);
+}
+
+/* Productos */
+
+.productos {
+  background: var(--gray-light);
+  padding: 20px;
+  margin-bottom: 60px;
+}
+
+.productos .producto {
+  position: relative;
+  width: 100%;
+}
+
+.productos .overlay {
+  width: 0%;
+  height: 100%;
+
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: var(--green-light);
+  overflow: hidden;
+  transition: 0.5s ease all;
+}
+
+.productos .producto:hover .overlay {
+  width: 100%;
+  opacity: 0.8;
+}
+
+.productos .producto .overlay-texto {
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  white-space: nowrap;
+  color: var(--white);
+  font-size: 18px;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+  border-top: 1px solid var(--white);
+  border-bottom: 1px solid var(--white);
+}
+
+.productos .btn-productos {
+  background-color: var(--green-light);
+  border: 2px solid transparent;
+  border-radius: 5px;
+  padding: 7px 20px;
+  color: var(--white);
+  text-transform: uppercase;
+  font-size: 18px;
+
+  transition: 0.3s ease;
+}
+
+.productos .btn-productos:hover {
+  background-color: transparent;
+  border: 2px solid var(--green-light);
+  color: var(--green-light);
+}
+
+/* Separador Parallax*/
+
+.separador {
+  width: 100%;
+  height: 250px;
+  background-image: url("../img/bg-separator.jpeg");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  margin-bottom: 60px;
+}
+
+.separador p {
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 24px;
+  font-family: "Noto Serif", serif;
+}
+
+/* Acerca de  */
+.acerca-de {
+  margin-bottom: 60px;
+}
+
+/* Galeria */
+.galeria {
+  padding-bottom: 60px;
+}
+
+.galeria img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+/* Footer */
+
+.contacto {
+  margin-bottom: 60px;
+}
+
+.contacto p {
+  transition: 0.3s ease all;
+}
+
+.contacto p:hover {
+  transform: scale(1.2);
+}
+
+.redes-sociales {
+  padding: 10px;
+  background-color: var(--green-dark);
+}
+
+.redes-sociales img {
+  padding: 5px;
+  border-radius: 100%;
+  width: 50px;
+  transition: 0.3s ease all;
+}
+
+.redes-sociales img:hover {
+  transform: scale(1.2);
+}
+
+/* Media Querys */
+
+@media screen and (max-width: 992px) {
+  p {
+    font-size: 18px;
+  }
+
+  .contenido-header .texto {
+    font-size: 60px;
+  }
+
+  .menu a {
+    font-size: 20px;
+  }
+
+  .titulo {
+    font-size: 30px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  p {
+    font-size: 14px;
+  }
+  .contenido-header .texto {
+    /* width: 100vw; */
+    font-size: 40px;
+  }
+
+  .contenido-header .texto span {
+    font-size: 20px;
+  }
+
+  .menu {
+    margin-bottom: 30px;
+  }
+
+  .menu a {
+    font-size: 12px;
+    padding: 5px 15px;
+  }
+
+  .titulo {
+    font-size: 15px;
+    margin-bottom: 15px;
+  }
+
+  .titulo::after {
+    top: -20px;
+  }
+
+  .subtitulo {
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+
+  .nosotros {
+    margin-bottom: 30px;
+  }
+
+  .nosotros .enlace {
+    margin-top: 20px;
+  }
+
+  .productos {
+    margin-bottom: 30px;
+  }
+
+  .productos .btn-productos {
+    font-size: 14px;
+  }
+
+  .separador {
+    margin-bottom: 30px;
+  }
+
+  .acerca-de {
+    margin-bottom: 30px;
+  }
+
+  .galeria {
+    padding-bottom: 30px;
+  }
+
+  .contacto {
+    margin-bottom: 30px;
+  }
+}
