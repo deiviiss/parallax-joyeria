@@ -21,4 +21,4 @@ Conceptos
 - mix-blend-mode: multiply
 
 
-![](https://repository-images.githubusercontent.com/396173343/3e0a23bd-59d9-4aec-b982-4a005776396a)
+![](https://repository-images.githubusercontent.com/396173343/e14fc775-a91d-4e04-99ee-401c87259779)
